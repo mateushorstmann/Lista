@@ -1,0 +1,188 @@
+* {
+    font-family: 'Raleway';
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: #3F3759;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    background: linear-gradient(#252041, #1d1f25);
+    width: 300px;
+    min-height: 600px;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 10px 10px 20px 2px #000;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 20px;
+    background: url(../img/perfil.jpg);
+    background-size: 120%;
+  }
+  
+  .panel {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  input, .add-task {
+    border: none;
+    vertical-align: top;
+  }
+  
+  input {
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    font-weight: bold;
+    outline: none;
+    width: 240px;
+  }
+  
+  .add-task {
+    background:linear-gradient(#7d2ede, #b133f7);
+    font-size: 40px;
+    width: 60px;
+    height: 40px;
+    border-radius: 0 10px 10px 0;
+    line-height: 0;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .task {
+    background: #292e3c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 6px;
+  }
+  
+  .status {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+    transition: border-color 0.5s;
+  }
+  
+  .status.pending {
+    border: 4px solid #f19731;
+  }
+  
+  .status.done {
+    border: 4px solid #2bc8d9;
+  }
+  
+  .text {
+    flex-grow: 1;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+  }
+  
+  .delete {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .delete:hover {
+    transform: rotate(16deg);
+  }
+  
+  .modal-layer {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    border-radius: 10px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    width: 300px;
+    min-height: 100px;
+    border: 1px solid #292e3c;
+    border-radius: 10px;
+    background: linear-gradient(#252041, #1d1f25);
+  }
+  
+  .modal h4 {
+    margin: 0;
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid white;
+  }
+  
+  .modal p {
+    font-size: 12px;
+    padding: 0 10px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .modal .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 20px 10px;
+  }
+  
+  .modal button {
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .modal button:first-child {
+    margin-right: 10px;
+    background: #fe6d6e;
+  }
+  
+  .modal button:last-child {
+    background: #2bc8d9;
+  }
+  
+  .modal p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
